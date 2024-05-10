@@ -1,3 +1,7 @@
+import 'package:flutter/material.dart';
+
+import '../model/student_model.dart';
+
 class AboutScreen extends StatefulWidget {
   const AboutScreen({super.key});
 
@@ -6,6 +10,7 @@ class AboutScreen extends StatefulWidget {
 }
 
 class _AboutScreenState extends State<AboutScreen> {
+
   final _gap = const SizedBox(height: 10);
   // List<DropdownMenuItem<String>>? cities;
 
@@ -44,12 +49,7 @@ class _AboutScreenState extends State<AboutScreen> {
   List<Student> students = [];
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Student Details'),
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(10),
+    return SizedBox.expand(
         child: Form(
           key: _key,
           child: Column(
@@ -174,7 +174,7 @@ class _AboutScreenState extends State<AboutScreen> {
             ],
           ),
         ),
-      ),
+
     );
   }
 }
